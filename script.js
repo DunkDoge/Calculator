@@ -13,3 +13,11 @@ function divide(a,b){
 function multiply(a,b){
     return a*b;
 }
+
+const topHalfDisplay = document.querySelector(".topScreen");
+const numBtns = document.querySelectorAll(".numberBtns");
+numBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+        topHalfDisplay.textContent += Number(button.textContent);
+    })
+})
