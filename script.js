@@ -1,5 +1,5 @@
-var num1;
-var num2;
+var num1 = "";
+var num2 = "";
 var operator = "";
 
 function add(a,b){
@@ -23,7 +23,8 @@ const numBtns = document.querySelectorAll(".numberBtns");
 numBtns.forEach((button) => {
     button.addEventListener("click", () => {
         topHalfDisplay.textContent += Number(button.textContent);
-        num1 = Number(button.textContent)
+        if (!operator) num1 = (button.textContent);
+        else num2 = (button.textContent);
     })
 })
 
@@ -33,17 +34,37 @@ operatorBtns.forEach((button) => {
         switch (button.textContent) {
             case "+":
                 operator = "+"
+                topHalfDisplay.textContent = "";
                 break;
             case "-":
                 operator = "-"
+                topHalfDisplay.textContent = "";
                 break;
             case "*":
                 operator = "*"
+                topHalfDisplay.textContent = "";
                 break;
             case "/":
                 operator = "/"
+                topHalfDisplay.textContent = "";
                 break;
         }
         console.log(operator);
     })
+})
+
+const equalsBtn = document.querySelector("#equalsBtn");
+equalsBtn.addEventListener("click", () => {
+    console.log(num1);
+    console.log(num2);
+    console.log(operator);
+
+    if (num1 && num2 && operator){
+        switch (operator){
+            case "+":
+                topHalfDisplay.textContent = add(Number(num1),Number(num2));
+                num1 = topHalfDisplay.textContent;
+                operator = "";
+        }
+    }
 })
