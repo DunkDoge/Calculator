@@ -65,6 +65,22 @@ equalsBtn.addEventListener("click", () => {
                 topHalfDisplay.textContent = add(Number(num1),Number(num2));
                 num1 = topHalfDisplay.textContent;
                 operator = "";
+                break;
+            case "-":
+                topHalfDisplay.textContent = minus(Number(num1),Number(num2));
+                num1 = topHalfDisplay.textContent;
+                operator = "";
+                break;
+            case "/":
+                topHalfDisplay.textContent = divide(Number(num1),Number(num2));
+                num1 = topHalfDisplay.textContent;
+                operator = "";
+                break;
+            case "*":
+                topHalfDisplay.textContent = multiply(Number(num1),Number(num2));
+                num1 = topHalfDisplay.textContent;
+                operator = "";
+                break;
         }
     }
 })
