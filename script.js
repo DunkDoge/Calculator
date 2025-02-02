@@ -22,9 +22,9 @@ const topHalfDisplay = document.querySelector(".bottomScreen");
 const numBtns = document.querySelectorAll(".numberBtns");
 numBtns.forEach((button) => {
     button.addEventListener("click", () => {
-        topHalfDisplay.textContent += Number(button.textContent);
-        if (!operator) num1 = (button.textContent);
-        else num2 = (button.textContent);
+        topHalfDisplay.textContent += button.textContent;
+        if (!operator) num1 = (topHalfDisplay.textContent);
+        else num2 = (topHalfDisplay.textContent);
     })
 })
 
