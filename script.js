@@ -104,3 +104,16 @@ acBtn.addEventListener("click", () => {
     operator = "";
     topHalfDisplay.textContent = "";
 })
+
+/*
+Logic for DEL button being clicked
+*/
+delBtn = document.querySelector("#DEL");
+delBtn.addEventListener("click", () => {
+    if (topHalfDisplay.textContent) {
+        topHalfDisplay.textContent = topHalfDisplay.textContent.substring(0,topHalfDisplay.textContent.length - 1);
+        if (!operator) num1 = (topHalfDisplay.textContent);
+        else num2 = (topHalfDisplay.textContent);
+
+    }
+})
