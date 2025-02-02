@@ -18,6 +18,9 @@ function multiply(a,b){
     return a*b;
 }
 
+/*
+Logic for number buttons being clicked
+*/
 const topHalfDisplay = document.querySelector(".bottomScreen");
 const numBtns = document.querySelectorAll(".numberBtns");
 numBtns.forEach((button) => {
@@ -28,6 +31,9 @@ numBtns.forEach((button) => {
     })
 })
 
+/*
+Logic for operator buttons being clicked
+*/
 const operatorBtns = document.querySelectorAll(".operatorBtns")
 operatorBtns.forEach((button) => {
     button.addEventListener("click", () => {
@@ -53,6 +59,9 @@ operatorBtns.forEach((button) => {
     })
 })
 
+/*
+Logic for equals button being clicked
+*/
 const equalsBtn = document.querySelector("#equalsBtn");
 equalsBtn.addEventListener("click", () => {
     console.log(num1);
@@ -83,4 +92,15 @@ equalsBtn.addEventListener("click", () => {
                 break;
         }
     }
+})
+
+/*
+Logic for AC button being clicked
+*/
+acBtn = document.querySelector("#AC");
+acBtn.addEventListener("click", () => {
+    num1 = "";
+    num2 = "";
+    operator = "";
+    topHalfDisplay.textContent = "";
 })
